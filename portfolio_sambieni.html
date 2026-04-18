@@ -1,0 +1,1274 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Professeur N'koué Emmanuel Sambiéni - Portail Privé</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<style>
+  :root {
+    --gold: #C9A96E;
+    --gold-light: #F5E6C0;
+    --gold-dark: #8B7355;
+    --ink: #1A1710;
+    --ink-mid: #3D3A30;
+    --ink-soft: #7A7668;
+    --cream: #FDFAF3;
+    --cream-mid: #F3EFE3;
+    --cream-dark: #E8E2D0;
+    --teal: #1A6B6B;
+    --teal-light: #E0F0F0;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--cream);
+    background-image: radial-gradient(circle at 25% 25%, rgba(201, 169, 110, 0.03) 0%, transparent 50%),
+                      radial-gradient(circle at 75% 75%, rgba(201, 169, 110, 0.03) 0%, transparent 50%);
+    color: var(--ink);
+    font-size: 15px;
+    line-height: 1.65;
+  }
+
+  /* ===== HERO ===== */
+  .hero {
+    background: linear-gradient(135deg, var(--ink) 0%, #2A261F 100%);
+    color: var(--cream);
+    padding: 80px 60px 70px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: inset 0 -2px 10px rgba(0, 0, 0, 0.3);
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -50%; right: -20%;
+    width: 500px; height: 500px;
+    background: radial-gradient(circle, var(--gold), transparent);
+    opacity: 0.08;
+    border-radius: 50%;
+  }
+
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: -10%; left: -10%;
+    width: 300px; height: 300px;
+    background: var(--gold);
+    opacity: 0.04;
+    border-radius: 50%;
+  }
+
+  .hero-inner {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 60px;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero-eyebrow {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 16px;
+  }
+
+  .hero-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 52px;
+    font-weight: 600;
+    line-height: 1.1;
+    color: #FFE8B6;
+    margin-bottom: 20px;
+    letter-spacing: -0.5px;
+  }
+
+  .hero-title {
+    font-size: 15px;
+    font-weight: 300;
+    color: #C8C2B0;
+    line-height: 1.7;
+    max-width: 520px;
+  }
+
+  .hero-title strong {
+    color: var(--gold-light);
+    font-weight: 400;
+  }
+
+  .hero-meta {
+    margin-top: 28px;
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+
+  .meta-pill {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 12.5px;
+    color: #A09A88;
+  }
+
+  .meta-pill .dot {
+    width: 5px; height: 5px;
+    border-radius: 50%;
+    background: var(--gold);
+    flex-shrink: 0;
+  }
+
+  .hero-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+  }
+
+  .stat-box {
+    background: linear-gradient(135deg, rgba(184, 146, 42, 0.25) 0%, rgba(184, 146, 42, 0.15) 100%);
+    border: 2px solid rgba(184, 146, 42, 0.4);
+    border-radius: 14px;
+    padding: 22px 26px;
+    text-align: center;
+    min-width: 120px;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+  }
+
+  .stat-box:hover {
+    background: linear-gradient(135deg, rgba(184, 146, 42, 0.35) 0%, rgba(184, 146, 42, 0.25) 100%);
+    border-color: rgba(184, 146, 42, 0.6);
+    transform: translateY(-2px);
+  }
+
+  .stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    font-weight: 600;
+    color: #FFE8B6;
+    display: block;
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-size: 11px;
+    color: #D4C5A9;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+    margin-top: 6px;
+    display: block;
+    font-weight: 500;
+  }
+
+  .hero-profile-img {
+    width: 220px;
+    height: 280px;
+    border-radius: 20px;
+    object-fit: cover;
+    border: 4px solid var(--gold);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1),
+                0 0 40px rgba(184, 146, 42, 0.2);
+    margin-bottom: 28px;
+    position: relative;
+    display: block;
+  }
+
+  /* ===== NAV BAR ===== */
+  .nav {
+    background: linear-gradient(180deg, white 0%, #FEFDFB 100%);
+    border-bottom: 2px solid var(--gold-light);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(184, 146, 42, 0.08);
+  }
+
+  .nav-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    gap: 0;
+    padding: 0 60px;
+  }
+
+  .nav a {
+    padding: 14px 20px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--ink-soft);
+    text-decoration: none;
+    border-bottom: 3px solid transparent;
+    transition: all 0.25s ease;
+    white-space: nowrap;
+  }
+
+  .nav a:hover {
+    color: var(--gold-dark);
+    border-bottom-color: var(--gold);
+  }
+
+  /* ===== MAIN ===== */
+  .main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 60px 80px;
+  }
+
+  /* ===== SECTION ===== */
+  .section {
+    padding: 56px 0 0;
+  }
+
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+
+  .section-label {
+    font-size: 10.5px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gold);
+    background: var(--gold-light);
+    padding: 6px 12px;
+    border-radius: 6px;
+  }
+
+  .section-rule {
+    flex: 1;
+    height: 2px;
+    background: linear-gradient(90deg, var(--gold-light) 0%, transparent 100%);
+  }
+
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 8px;
+  }
+
+  /* ===== ABOUT ===== */
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+  }
+
+  .about-card {
+    background: linear-gradient(135deg, #FFFFFF 0%, #FFFEF9 100%);
+    border: 2px solid var(--cream-dark);
+    border-radius: 14px;
+    padding: 28px 30px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  }
+
+  .about-card:hover {
+    border-color: var(--gold-light);
+    box-shadow: 0 8px 25px rgba(184, 146, 42, 0.15);
+    transform: translateY(-2px);
+  }
+
+  .about-card.full {
+    grid-column: 1 / -1;
+  }
+
+  .card-label {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 12px;
+    background: var(--gold-light);
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 4px;
+  }
+
+  .card-content {
+    font-size: 14.5px;
+    color: var(--ink-mid);
+    line-height: 1.7;
+  }
+
+  .expertise-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 6px;
+  }
+
+  .tag {
+    background: var(--cream-mid);
+    border: 1.5px solid var(--cream-dark);
+    border-radius: 20px;
+    padding: 6px 14px;
+    font-size: 12.5px;
+    color: var(--ink-mid);
+    font-weight: 400;
+    transition: all 0.25s ease;
+  }
+
+  .tag:hover {
+    background: var(--gold-light);
+    border-color: var(--gold);
+    color: var(--gold-dark);
+  }
+
+  .tag.accent {
+    background: var(--gold-light);
+    border-color: rgba(184, 146, 42, 0.3);
+    color: var(--gold-dark);
+  }
+
+  /* ===== EXPERIENCE TIMELINE ===== */
+  .timeline {
+    position: relative;
+    padding-left: 28px;
+  }
+
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 8px;
+    top: 8px;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(180deg, var(--gold) 0%, var(--gold-light) 50%, var(--cream-dark) 100%);
+  }
+
+  .timeline-item {
+    position: relative;
+    margin-bottom: 28px;
+    padding-bottom: 28px;
+    border-bottom: 1px solid var(--cream-mid);
+  }
+
+  .timeline-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .timeline-dot {
+    position: absolute;
+    left: -24px;
+    top: 6px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--gold);
+    border: 3px solid white;
+    box-shadow: 0 0 0 2px var(--gold), 0 0 10px rgba(184, 146, 42, 0.3);
+  }
+
+  .timeline-date {
+    font-size: 11.5px;
+    font-weight: 500;
+    color: var(--gold-dark);
+    margin-bottom: 5px;
+    letter-spacing: 0.03em;
+  }
+
+  .timeline-role {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--ink);
+    margin-bottom: 3px;
+  }
+
+  .timeline-org {
+    font-size: 13px;
+    color: var(--teal);
+    margin-bottom: 6px;
+    font-weight: 400;
+  }
+
+  .timeline-desc {
+    font-size: 13.5px;
+    color: var(--ink-mid);
+    line-height: 1.65;
+  }
+
+  /* ===== EDUCATION ===== */
+  .edu-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .edu-card {
+    background: linear-gradient(135deg, #FFFFFF 0%, #FFFEF9 100%);
+    border: 2px solid var(--cream-dark);
+    border-radius: 12px;
+    padding: 20px 22px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+
+  .edu-card:hover {
+    border-color: var(--gold-light);
+    box-shadow: 0 6px 20px rgba(184, 146, 42, 0.12);
+  }
+
+  .edu-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 4px; height: 100%;
+    background: var(--gold);
+    border-radius: 12px 0 0 12px;
+  }
+
+  .edu-year {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--gold);
+    letter-spacing: 0.08em;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+  }
+
+  .edu-degree {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 4px;
+    line-height: 1.4;
+  }
+
+  .edu-institution {
+    font-size: 12.5px;
+    color: var(--teal);
+    margin-bottom: 6px;
+  }
+
+  .edu-topic {
+    font-size: 12px;
+    color: var(--ink-soft);
+    font-style: italic;
+    line-height: 1.5;
+  }
+
+  /* ===== PUBLICATIONS ===== */
+  .pub-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .pub-item {
+    background: linear-gradient(135deg, #FFFFFF 0%, #FFFEF9 100%);
+    border: 2px solid var(--cream-dark);
+    border-radius: 10px;
+    padding: 18px 22px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 16px;
+    align-items: start;
+    transition: all 0.3s ease;
+  }
+
+  .pub-item:hover {
+    border-color: var(--gold-light);
+    box-shadow: 0 6px 20px rgba(184, 146, 42, 0.12);
+  }
+
+  .pub-type {
+    background: var(--teal-light);
+    color: var(--teal);
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 5px 10px;
+    border-radius: 6px;
+    white-space: nowrap;
+    margin-top: 2px;
+  }
+
+  .pub-type.these { background: var(--gold-light); color: var(--gold-dark); }
+  .pub-type.article { background: #E8F5E9; color: #2E7D32; }
+  .pub-type.comm { background: #EDE7F6; color: #512DA8; }
+
+  .pub-title {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--ink);
+    margin-bottom: 4px;
+    line-height: 1.45;
+  }
+
+  .pub-ref {
+    font-size: 12.5px;
+    color: var(--ink-soft);
+  }
+
+  /* ===== SKILLS ===== */
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+
+  .skill-card {
+    background: linear-gradient(135deg, #FFFFFF 0%, #FFFEF9 100%);
+    border: 2px solid var(--cream-dark);
+    border-radius: 14px;
+    padding: 22px;
+    transition: all 0.3s ease;
+  }
+
+  .skill-card:hover {
+    border-color: var(--gold-light);
+    box-shadow: 0 8px 25px rgba(184, 146, 42, 0.15);
+    transform: translateY(-3px);
+  }
+
+  .skill-icon {
+    width: 42px; height: 42px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, var(--gold-light), #FFE0A0);
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 14px;
+    font-size: 18px;
+  }
+
+  .skill-name {
+    font-size: 13.5px;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 6px;
+  }
+
+  .skill-desc {
+    font-size: 12px;
+    color: var(--ink-soft);
+    line-height: 1.55;
+  }
+
+  /* ===== CONTACT ===== */
+  .contact-bar {
+    background: linear-gradient(135deg, var(--ink) 0%, #2A261F 100%);
+    border-radius: 18px;
+    padding: 48px 56px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 40px;
+    align-items: center;
+    margin-top: 60px;
+    border: 2px solid rgba(184, 146, 42, 0.2);
+    box-shadow: 0 20px 50px rgba(184, 146, 42, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  }
+
+  .contact-bar h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    color: #FFE8B6;
+    margin-bottom: 10px;
+    font-weight: 600;
+  }
+
+  .contact-bar p {
+    font-size: 14px;
+    color: #D4C5A9;
+  }
+
+  .contact-links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .contact-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+    color: #FFE8B6;
+    text-decoration: none;
+    transition: all 0.25s ease;
+  }
+
+  .contact-link:hover {
+    color: var(--cream);
+  }
+
+  .contact-link .icon {
+    width: 38px; height: 38px;
+    border-radius: 10px;
+    background: rgba(184, 146, 42, 0.25);
+    border: 2px solid rgba(184, 146, 42, 0.4);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 16px;
+    flex-shrink: 0;
+    transition: all 0.25s ease;
+  }
+
+  .contact-form {
+    background: linear-gradient(135deg, #FFFFFF 0%, #FFFEF9 100%);
+    border: 2px solid var(--cream-dark);
+    border-radius: 14px;
+    padding: 28px 30px;
+    margin-top: 40px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+  }
+
+  .contact-form:hover {
+    border-color: var(--gold-light);
+    box-shadow: 0 8px 25px rgba(184, 146, 42, 0.15);
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+  }
+
+  .form-label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--gold);
+    margin-bottom: 6px;
+    letter-spacing: 0.02em;
+  }
+
+  .form-input,
+  .form-textarea {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid var(--cream-dark);
+    border-radius: 8px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    color: var(--ink);
+    background: var(--cream);
+    transition: all 0.25s ease;
+    box-sizing: border-box;
+  }
+
+  .form-input:focus,
+  .form-textarea:focus {
+    outline: none;
+    border-color: var(--gold);
+    box-shadow: 0 0 0 3px rgba(201, 169, 110, 0.1);
+  }
+
+  .form-textarea {
+    resize: vertical;
+    min-height: 120px;
+  }
+
+  .form-submit {
+    background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+    color: white;
+    border: none;
+    padding: 14px 28px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    font-family: 'DM Sans', sans-serif;
+    letter-spacing: 0.02em;
+  }
+
+  .form-submit:hover {
+    background: linear-gradient(135deg, var(--gold-dark) 0%, var(--gold) 100%);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(201, 169, 110, 0.3);
+  }
+  .footer {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 28px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 2px solid var(--gold-light);
+  }
+
+  .footer-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--gold);
+  }
+
+  .footer-note {
+    font-size: 12px;
+    color: var(--ink-soft);
+  }
+
+  /* ===== DESKTOP OPTIMIZATION (1200px+) ===== */
+  @media (min-width: 1201px) {
+    .main { max-width: 1000px; }
+    .nav-inner { max-width: 1000px; }
+  }
+
+  /* ===== TABLET & MEDIUM DEVICES (1024px - 1200px) ===== */
+  @media (max-width: 1024px) {
+    .hero-inner { gap: 40px; }
+    .main { max-width: 100%; padding: 0 48px 60px; }
+    .nav-inner { max-width: 100%; padding: 0 48px; }
+    .hero-profile-img { width: 200px; height: 250px; }
+    .contact-bar { padding: 40px 48px; }
+  }
+
+  /* ===== TABLET (768px - 1023px) ===== */
+  @media (max-width: 1023px) {
+    .hero { padding: 60px 32px 50px; }
+    .hero-inner { max-width: 100%; gap: 30px; }
+    .hero-name { font-size: 44px; }
+    .hero-title { font-size: 14px; }
+    .hero-profile-img { width: 180px; height: 230px; margin-bottom: 20px; }
+    .stat-box { min-width: 100px; padding: 18px 20px; }
+    .stat-num { font-size: 32px; }
+    .nav-inner { max-width: 100%; padding: 0 32px; }
+    .main { max-width: 100%; padding: 0 32px 60px; }
+    .about-grid, .edu-grid, .skills-grid { gap: 20px; }
+    .contact-bar { gap: 30px; padding: 36px 40px; }
+    .footer { padding: 24px 32px; }
+  }
+
+  /* ===== MOBILE LANDSCAPE & SMALL TABLET (600px - 767px) ===== */
+  @media (max-width: 767px) {
+    .hero { padding: 48px 20px 40px; }
+    .hero-inner { grid-template-columns: 1fr; gap: 35px; }
+    .hero-name { font-size: 36px; line-height: 1.2; }
+    .hero-title { font-size: 13.5px; max-width: 100%; }
+    .hero-eyebrow { font-size: 10px; }
+    .hero-meta { gap: 16px; flex-direction: column; }
+    .meta-pill { font-size: 11.5px; }
+    .hero-profile-img { width: 150px; height: 190px; margin-bottom: 16px; }
+    .hero-stats { flex-direction: row; gap: 10px; justify-content: center; }
+    .stat-box { min-width: 85px; padding: 16px 14px; border-radius: 10px; }
+    .stat-num { font-size: 26px; }
+    .stat-label { font-size: 10px; margin-top: 4px; }
+    .nav { padding: 0; }
+    .nav a { padding: 12px 14px; font-size: 12px; }
+    .nav-inner { max-width: 100%; padding: 0 16px; gap: 0; }
+    .main { max-width: 100%; padding: 0 20px 50px; }
+    .section { padding: 40px 0 0; }
+    .section-header { gap: 12px; margin-bottom: 24px; }
+    .section-label { font-size: 9.5px; padding: 5px 10px; }
+    .section-title { font-size: 24px; }
+    .about-grid, .edu-grid { grid-template-columns: 1fr; gap: 16px; }
+    .about-card { padding: 20px 22px; }
+    .card-label { font-size: 9px; margin-bottom: 8px; }
+    .card-content { font-size: 13.5px; }
+    .expertise-tags { gap: 6px; }
+    .tag { font-size: 11px; padding: 5px 12px; }
+    .timeline { padding-left: 24px; }
+    .timeline::before { left: 6px; }
+    .timeline-dot { left: -22px; width: 10px; height: 10px; top: 8px; }
+    .timeline-date { font-size: 11px; }
+    .timeline-role { font-size: 13.5px; }
+    .timeline-desc { font-size: 12.5px; }
+    .pub-list { gap: 12px; }
+    .pub-item { padding: 14px 16px; gap: 12px; }
+    .pub-title { font-size: 13px; }
+    .pub-ref { font-size: 11.5px; }
+    .skills-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+    .skill-card { padding: 16px; }
+    .skill-icon { width: 36px; height: 36px; margin-bottom: 10px; }
+    .skill-name { font-size: 12.5px; }
+    .skill-desc { font-size: 11px; }
+    .contact-bar { grid-template-columns: 1fr; gap: 28px; padding: 32px 20px; border-radius: 14px; }
+    .contact-bar h2 { font-size: 24px; margin-bottom: 6px; }
+    .contact-bar p { font-size: 12.5px; }
+    .contact-links { gap: 10px; }
+    .contact-link { font-size: 13px; gap: 8px; }
+    .contact-link .icon { width: 34px; height: 34px; font-size: 14px; }
+    .footer { padding: 20px; flex-direction: column; gap: 8px; text-align: center; border-top: 1.5px solid var(--gold-light); }
+    .footer-name { font-size: 13px; }
+    .footer-note { font-size: 11px; }
+  }
+
+  /* ===== MOBILE SMALL (480px - 599px) ===== */
+  @media (max-width: 599px) {
+    .hero { padding: 40px 16px 36px; }
+    .hero-inner { gap: 28px; }
+    .hero-name { font-size: 32px; letter-spacing: -0.3px; }
+    .hero-title { font-size: 13px; line-height: 1.6; margin-top: 10px; }
+    .hero-eyebrow { font-size: 9px; margin-bottom: 12px; }
+    .hero-meta { gap: 12px; }
+    .meta-pill { font-size: 11px; }
+    .hero-profile-img { width: 140px; height: 180px; border: 3px solid var(--gold); margin-bottom: 14px; }
+    .hero-stats { flex-direction: row; gap: 8px; }
+    .stat-box { min-width: 80px; padding: 14px 12px; font-size: 12px; }
+    .stat-num { font-size: 24px; }
+    .stat-label { font-size: 9px; }
+    .nav a { padding: 10px 12px; font-size: 11px; }
+    .main { padding: 0 16px 40px; }
+    .section { padding: 32px 0 0; }
+    .section-label { font-size: 8.5px; padding: 4px 8px; }
+    .section-title { font-size: 22px; }
+    .about-grid { gap: 14px; }
+    .about-card { padding: 18px 16px; }
+    .card-label { font-size: 8px; }
+    .card-content { font-size: 13px; }
+    .tag { font-size: 10px; padding: 4px 10px; }
+    .timeline { padding-left: 20px; }
+    .timeline::before { left: 5px; }
+    .timeline-dot { left: -20px; width: 9px; height: 9px; top: 9px; }
+    .timeline-date { font-size: 10px; }
+    .timeline-role { font-size: 13px; font-weight: 600; }
+    .timeline-desc { font-size: 12px; }
+    .timeline-item { margin-bottom: 20px; padding-bottom: 20px; }
+    .skills-grid { grid-template-columns: 1fr; gap: 12px; }
+    .skill-card { padding: 14px; }
+    .pub-item { padding: 12px 14px; }
+    .pub-title { font-size: 12.5px; }
+    .pub-ref { font-size: 11px; }
+    .contact-bar { padding: 28px 16px; gap: 24px; margin-top: 48px; }
+    .contact-bar h2 { font-size: 21px; }
+    .contact-bar p { font-size: 12px; }
+    .contact-link { font-size: 12.5px; }
+    .contact-link .icon { width: 32px; height: 32px; font-size: 13px; }
+    .footer { padding: 16px 12px; gap: 6px; }
+    .footer-name { font-size: 12px; }
+    .footer-note { font-size: 10px; }
+  }
+
+  /* ===== MOBILE EXTRA SMALL (< 480px) ===== */
+  @media (max-width: 479px) {
+    .hero { padding: 36px 12px 32px; }
+    .hero-name { font-size: 28px; }
+    .hero-title { font-size: 12px; }
+    .hero-profile-img { width: 130px; height: 170px; margin-bottom: 12px; }
+    .hero-stats { gap: 6px; }
+    .stat-box { min-width: 70px; padding: 12px 10px; min-height: auto; }
+    .stat-num { font-size: 22px; }
+    .nav a { padding: 9px 10px; font-size: 10px; }
+    .main { padding: 0 12px 36px; }
+    .section { padding: 28px 0 0; }
+    .section-header { gap: 10px; }
+    .section-title { font-size: 20px; }
+    .about-card { padding: 16px 14px; }
+    .card-label { font-size: 8px; }
+    .card-content { font-size: 12.5px; }
+    .tag { font-size: 9.5px; padding: 3px 8px; }
+    .timeline-role { font-size: 12.5px; }
+    .timeline-desc { font-size: 11.5px; }
+    .timeline-item { margin-bottom: 18px; }
+    .contact-bar { padding: 24px 12px; margin-top: 40px; }
+    .contact-bar h2 { font-size: 19px; }
+    .contact-bar p { font-size: 11.5px; }
+    .footer { padding: 14px 10px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-inner">
+    <div>
+      <p class="hero-eyebrow">Portfolio Professionnel</p>
+      <h1 class="hero-name">Professeur N'koué<br>Emmanuel Sambiéni</h1>
+      <p class="hero-title">
+        <strong>Enseignant-Chercheur · Université de Parakou</strong><br>
+        Directeur du LASDEL — Bénin &amp; Niamey<br>
+        Socio-anthropologue de la santé, chercheur en sciences sociales appliquées au développement en Afrique de l'Ouest.
+      </p>
+      <div class="hero-meta">
+        <span class="meta-pill"><span class="dot"></span>Parakou, Bénin</span>
+        <span class="meta-pill"><span class="dot"></span>esambieni@yahoo.fr</span>
+        <span class="meta-pill"><span class="dot"></span>+229 97 18 68 03</span>
+      </div>
+    </div>
+    <div>
+      <img src="profile.jpg" alt="Professeur N'koué Emmanuel Sambiéni" class="hero-profile-img">
+      <div class="hero-stats">
+        <div class="stat-box">
+          <span class="stat-num">21+</span>
+          <span class="stat-label">Années<br>d'expérience</span>
+        </div>
+        <div class="stat-box">
+          <span class="stat-num">15+</span>
+          <span class="stat-label">Publications<br>&amp; Comm.</span>
+        </div>
+        <div class="stat-box">
+          <span class="stat-num">6</span>
+          <span class="stat-label">Diplômes<br>supérieurs</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="#profil">Profil</a>
+    <a href="#experience">Expériences</a>
+    <a href="#formation">Formation</a>
+    <a href="#publications">Publications</a>
+    <a href="#competences">Compétences</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<main class="main">
+
+  <!-- PROFIL -->
+  <section class="section" id="profil">
+    <div class="section-header">
+      <span class="section-label">01 — Profil</span>
+      <div class="section-rule"></div>
+    </div>
+    <div class="about-grid">
+      <div class="about-card full">
+        <p class="card-label">Présentation</p>
+        <p class="card-content">
+          Chercheur et enseignant béninois reconnu, le Dr. Sambiéni est titulaire d'un doctorat en sciences politiques et sociales de l'Université de Liège (Belgique) et d'un stage postdoctoral à l'Université de Montréal (Canada). Il dirige le LASDEL à Parakou, laboratoire de référence en sciences sociales appliquées en Afrique de l'Ouest. Ses travaux portent sur la gouvernance sanitaire, la santé maternelle, le VIH/SIDA et les dynamiques sociales du développement local.
+        </p>
+      </div>
+      <div class="about-card">
+        <p class="card-label">Domaines d'expertise</p>
+        <div class="expertise-tags">
+          <span class="tag accent">Socio-anthropologie de la santé</span>
+          <span class="tag accent">Santé maternelle &amp; infantile</span>
+          <span class="tag accent">VIH/SIDA</span>
+          <span class="tag">Développement local</span>
+          <span class="tag">Financement basé sur les résultats</span>
+          <span class="tag">Communication pour la santé</span>
+          <span class="tag">Évaluation de projets</span>
+          <span class="tag">Recherche qualitative</span>
+          <span class="tag">Planification sanitaire</span>
+        </div>
+      </div>
+      <div class="about-card">
+        <p class="card-label">Appartenances institutionnelles</p>
+        <div class="expertise-tags">
+          <span class="tag">LASDEL — Parakou &amp; Niamey</span>
+          <span class="tag">LADYD — Cotonou</span>
+          <span class="tag">Pôle Sud, Univ. de Liège</span>
+          <span class="tag">Cabinet R-Sud — Parakou</span>
+          <span class="tag">Université de Parakou</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPÉRIENCES -->
+  <section class="section" id="experience">
+    <div class="section-header">
+      <span class="section-label">02 — Expériences professionnelles</span>
+      <div class="section-rule"></div>
+    </div>
+    <div class="timeline">
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <p class="timeline-date">Fonction actuelle — Université de Parakou, Bénin</p>
+        <p class="timeline-role">Enseignant-Chercheur &amp; Directeur du LASDEL</p>
+        <p class="timeline-org">Université de Parakou · LASDEL</p>
+        <p class="timeline-desc">Enseignement et recherche en socio-anthropologie de la santé. Direction du Laboratoire de Recherche et d'Études sur les Dynamiques Sociales et le Développement Local.</p>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <p class="timeline-date">Oct. 2019 – Jan. 2020</p>
+        <p class="timeline-role">Chercheur au Sud — Mutuelles de santé</p>
+        <p class="timeline-org">Ambassade du Royaume de Belgique / UCLouvain</p>
+        <p class="timeline-desc">Étude du potentiel socio-économique et technique des mutuelles de santé et initiatives d'économie sociale pour les travailleurs ruraux au Bénin.</p>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <p class="timeline-date">Avr. 2018 – Juin 2018</p>
+        <p class="timeline-role">Expert consultant en santé publique</p>
+        <p class="timeline-org">Camber Collective (USA)</p>
+        <p class="timeline-desc">Étude de la demande en santé familiale au Bénin. Conception et mise en œuvre d'une étude qualitative sur la santé des adolescents et jeunes couples.</p>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <p class="timeline-date">Oct. 2018 – Nov. 2018</p>
+        <p class="timeline-role">Expert national suivi scientifique</p>
+        <p class="timeline-org">Projet PASS Sourou (Enabel) — Zones sanitaires Mono, Couffo, Donga</p>
+        <p class="timeline-desc">Étude de la mise en œuvre des interventions de promotion des droits sexuels et reproductifs, soins obstétricaux néonataux d'urgence et prise en charge des maladies non transmissibles.</p>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <p class="timeline-date">Nov. 2014 – Mars 2016</p>
+        <p class="timeline-role">Chercheur socio-anthropologue</p>
+        <p class="timeline-org">Médecins du Monde France</p>
+        <p class="timeline-desc">Étude des déterminants socioculturels des grossesses non désirées et des avortements au Burkina Faso, RDC, Pérou et Palestine.</p>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <p class="timeline-date">Juin 2014 – Juin 2015</p>
+        <p class="timeline-role">Chercheur postdoctoral</p>
+        <p class="timeline-org">Université de Montréal — CRCHUM (Canada)</p>
+        <p class="timeline-desc">Étude de l'émergence du financement basé sur les résultats dans le secteur de la santé au Bénin et au Burkina Faso.</p>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <p class="timeline-date">Fév. 2014 – Mai 2014</p>
+        <p class="timeline-role">Consultant associé</p>
+        <p class="timeline-org">UNICEF Bénin</p>
+        <p class="timeline-desc">Étude nationale sur les enfants exclus de l'école au Bénin.</p>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <p class="timeline-date">Mai 2014</p>
+        <p class="timeline-role">Chef de mission — Diagnostic participatif</p>
+        <p class="timeline-org">GiZ Togo (Programme Bonne Gouvernance)</p>
+        <p class="timeline-desc">Diagnostic participatif de la commune de Sokodé (Togo) dans le cadre de l'élaboration du Plan de Développement Communal.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FORMATION -->
+  <section class="section" id="formation">
+    <div class="section-header">
+      <span class="section-label">03 — Formation académique</span>
+      <div class="section-rule"></div>
+    </div>
+    <div class="edu-grid">
+
+      <div class="edu-card">
+        <p class="edu-year">Juin 2014 – Juin 2015</p>
+        <p class="edu-degree">Stage postdoctoral</p>
+        <p class="edu-institution">Université de Montréal (Canada)</p>
+        <p class="edu-topic">Émergence du financement basé sur les résultats au Bénin et au Burkina Faso</p>
+      </div>
+
+      <div class="edu-card">
+        <p class="edu-year">Sept. 2007 – Jan. 2012</p>
+        <p class="edu-degree">Doctorat — Sciences politiques et sociales</p>
+        <p class="edu-institution">Université de Liège (Belgique)</p>
+        <p class="edu-topic">Gouverner la maternité au Bénin : politiques sanitaires dans le territoire de la Pendjari</p>
+      </div>
+
+      <div class="edu-card">
+        <p class="edu-year">Sept. 2007 – Nov. 2008</p>
+        <p class="edu-degree">Master 2 Recherche — Sciences de l'Éducation</p>
+        <p class="edu-institution">Université de Besançon (France)</p>
+        <p class="edu-topic">Les tradithérapeutes dans la lutte contre le sida au Bénin et au Burkina Faso</p>
+      </div>
+
+      <div class="edu-card">
+        <p class="edu-year">Sept. 2002 – Nov. 2003</p>
+        <p class="edu-degree">DEA de Sociologie — Mention bien</p>
+        <p class="edu-institution">Université Cheikh Anta-Diop (Sénégal)</p>
+        <p class="edu-topic">Représentations, pratiques sexuelles chez les Natimba et méthodes préventives du VIH/SIDA</p>
+      </div>
+
+      <div class="edu-card">
+        <p class="edu-year">Juillet 2003</p>
+        <p class="edu-degree">DESS — Gestion des Programmes de Santé</p>
+        <p class="edu-institution">CESAG, Dakar (Sénégal)</p>
+        <p class="edu-topic">Communication interne et efficacité des services de santé — PMI de Médina</p>
+      </div>
+
+      <div class="edu-card">
+        <p class="edu-year">Mars 1999</p>
+        <p class="edu-degree">Maîtrise Socio-anthropologie — Très bien</p>
+        <p class="edu-institution">Université Nationale du Bénin</p>
+        <p class="edu-topic">Impact des rites de naissance et funéraires sur le développement socio-économique de Cobly</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PUBLICATIONS -->
+  <section class="section" id="publications">
+    <div class="section-header">
+      <span class="section-label">04 — Travaux &amp; Publications</span>
+      <div class="section-rule"></div>
+    </div>
+    <div class="pub-list">
+
+      <div class="pub-item">
+        <span class="pub-type these">Thèse</span>
+        <div>
+          <p class="pub-title">Gouverner la maternité au Bénin. Les difficiles conditions d'application des politiques sanitaires dans le territoire de la Pendjari</p>
+          <p class="pub-ref">Thèse de doctorat — Université de Liège, janvier 2012</p>
+        </div>
+      </div>
+
+      <div class="pub-item">
+        <span class="pub-type article">Article</span>
+        <div>
+          <p class="pub-title">Les femmes dans les soins maternels au Bénin. Le rendez-vous manqué !</p>
+          <p class="pub-ref">Revue Dezan, numéro spécial, août 2012, pp. 78-102</p>
+        </div>
+      </div>
+
+      <div class="pub-item">
+        <span class="pub-type article">Article</span>
+        <div>
+          <p class="pub-title">Peul et Somba de la région de Tanguiéta au Bénin. Étude comparative des pratiques d'accouchement</p>
+          <p class="pub-ref">Université de Metz — Publication en ligne, 2008</p>
+        </div>
+      </div>
+
+      <div class="pub-item">
+        <span class="pub-type article">Article</span>
+        <div>
+          <p class="pub-title">Braconnage dans la réserve de Biosphère de la Pendjari : les fondements socioculturels d'une résistance des acteurs</p>
+          <p class="pub-ref">In Populations riveraines et promotion de l'artisanat local, Pendjari, 2006, pp. 26-29</p>
+        </div>
+      </div>
+
+      <div class="pub-item">
+        <span class="pub-type comm">Communication</span>
+        <div>
+          <p class="pub-title">Les femmes dans les soins maternels au Bénin. Le rendez-vous manqué</p>
+          <p class="pub-ref">Colloque « Patient, personne, citoyen, client » — Université Catholique de Lille, mai 2010</p>
+        </div>
+      </div>
+
+      <div class="pub-item">
+        <span class="pub-type comm">Communication</span>
+        <div>
+          <p class="pub-title">Gestantes et parturientes en décisions dans la trajectoire des soins maternels au Bénin</p>
+          <p class="pub-ref">Université d'été de l'AISLF — Lausanne (Suisse), juin 2010</p>
+        </div>
+      </div>
+
+      <div class="pub-item">
+        <span class="pub-type comm">Communication</span>
+        <div>
+          <p class="pub-title">Biographie des traitements néo-traditionnels du VIH/SIDA au Bénin : le MNF et le Combretum Micranthum</p>
+          <p class="pub-ref">Séminaire anthropologie des traitements néo-traditionnels — Aix-en-Provence, juin 2008</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- COMPÉTENCES -->
+  <section class="section" id="competences">
+    <div class="section-header">
+      <span class="section-label">05 — Compétences</span>
+      <div class="section-rule"></div>
+    </div>
+    <div class="skills-grid">
+
+      <div class="skill-card">
+        <div class="skill-icon"><i class="fas fa-chart-bar"></i></div>
+        <p class="skill-name">Analyse quantitative</p>
+        <p class="skill-desc">SPSS, Epi Info, Sphinx 2+, QDAMiner pour l'analyse statistique des données de santé.</p>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-icon"><i class="fas fa-search"></i></div>
+        <p class="skill-name">Analyse qualitative</p>
+        <p class="skill-desc">Nvivo, QDAMiner — entretiens, focus groups, observations ethnographiques.</p>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-icon"><i class="fas fa-book"></i></div>
+        <p class="skill-name">Gestion bibliographique</p>
+        <p class="skill-desc">EndNote, Zotero, Mendeley pour la citation et gestion de références scientifiques.</p>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-icon"><i class="fas fa-desktop"></i></div>
+        <p class="skill-name">Bureautique avancée</p>
+        <p class="skill-desc">Word, Excel, PowerPoint, Access pour la gestion et présentation des données.</p>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-icon"><i class="fas fa-language"></i></div>
+        <p class="skill-name">Langues</p>
+        <p class="skill-desc">Français (excellent — lu, parlé, écrit). Anglais (lu très bien, écrit bien, parlé passable).</p>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-icon"><i class="fas fa-graduation-cap"></i></div>
+        <p class="skill-name">Enseignement &amp; formation</p>
+        <p class="skill-desc">Cours en ligne (AUF), formation d'équipes multidisciplinaires, direction de thèses.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section" id="contact">
+    <div class="section-header">
+      <span class="section-label">06 — Contact</span>
+      <div class="section-rule"></div>
+    </div>
+    <div class="contact-bar">
+      <div>
+        <h2>Prenons contact</h2>
+        <p>Disponible pour des collaborations de recherche, consultances et expertises en santé publique et développement local en Afrique de l'Ouest.</p>
+      </div>
+      <div class="contact-links">
+        <a class="contact-link" href="mailto:esambieni@yahoo.fr">
+          <span class="icon"><i class="fas fa-envelope"></i></span>
+          esambieni@yahoo.fr
+        </a>
+        <a class="contact-link" href="tel:+22997186803">
+          <span class="icon"><i class="fas fa-phone"></i></span>
+          +229 01 97 18 68 03
+        </a>
+        <a class="contact-link" href="#">
+          <span class="icon"><i class="fas fa-map-marker-alt"></i></span>
+          02 BP 979 — Parakou, Bénin
+        </a>
+      </div>
+    </div>
+
+    <!-- FORMULAIRE DE CONTACT -->
+    <div class="contact-form">
+      <h3 style="font-family: 'Playfair Display', serif; font-size: 24px; color: var(--ink); margin-bottom: 20px; text-align: center;">Envoyez-moi un message</h3>
+      <form action="mailto:esambieni@yahoo.fr" method="post" enctype="text/plain">
+        <div class="form-group">
+          <label class="form-label" for="nom">Nom et Prénoms *</label>
+          <input type="text" id="nom" name="Nom et Prénoms" class="form-input" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="objet">Objet *</label>
+          <input type="text" id="objet" name="Objet" class="form-input" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="message">Message *</label>
+          <textarea id="message" name="Message" class="form-textarea" required></textarea>
+        </div>
+        <div style="text-align: center;">
+          <button type="submit" class="form-submit">Envoyer le message</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <span class="footer-name">Professeur N'koué Emmanuel Sambiéni</span>
+  <span class="footer-note">Tous droits réservés</span>
+</footer>
+
+</body>
+</html>
